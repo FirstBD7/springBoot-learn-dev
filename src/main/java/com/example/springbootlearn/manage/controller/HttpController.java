@@ -17,8 +17,8 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController
 @RequestMapping("/httpTo")
-public class httpController {
-    private static final Logger logger = LoggerFactory.getLogger(httpController.class);
+public class HttpController {
+    private static final Logger logger = LoggerFactory.getLogger(HttpController.class);
 
     @GetMapping("test01")
     public Result test01()

@@ -1,0 +1,24 @@
+# 应用服务 WEB 访问端口
+server.port: 8080
+
+# 配置数据源
+datasource:
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/vibe_music?useUnicode=true&characterEncoding=utf-8&useSSL=false # 修改你的 MySQL 地址和库名
+  username: root
+  password: 12345678
+  type: com.alibaba.druid.pool.DruidDataSource # 配置连接池
+
+# Redis服务连接配置
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: sinosoft!@#admin
+    timeout: 5000ms
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 2
+      shutdown-timeout: 1000ms
